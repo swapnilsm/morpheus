@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Highlight Autogen</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" style="background-image:none">      
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Highlights Autogen</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/url.html">URL</a></li>
+            <li><a href="/upload.html">Upload</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron text-center">
+        <h1>We'll get it for you !!!</h1>
+        <p>Don't have the video with you. No worries :) We'll get it for you. Just paste the url below.</p>
+        <form role="form">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-6 col-lg-offset-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon">URL</span>
+                  <input id="url" type="text" class="form-control input-lg" placeholder="Paste it here!">
+                </div>
+              </div><!-- /.col-lg-6 -->
+              <div class="col-lg-6 col-lg-offset-3">
+                <div class="input-group input-group-lg">
+                  <input id="time" type="text" class="form-control" placeholder="How much time you've got?">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" onclick="passUrl()">Go!</button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->          
+            </div><!-- /.row -->
+          </div>
+        </form>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content col-lg-4 col-lg-offset-4">
+            <div class="modal-body">
+              <img src="/spinner.gif"/>
+              <h3>Processing</h3>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.file-input.js"></script>
+    <script src="js/morpheus.js"></script>    
+    <script>
+      $(function() {
+      $('input[type=file]').bootstrapFileInput();
+      $('.file-inputs').bootstrapFileInput();
+      });
+    </script>
+  </body>
+</html>
